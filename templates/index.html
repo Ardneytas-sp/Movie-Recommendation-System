@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Change the font family to your preferred font */
+            background-color: #f4f4f4; /* Set a light background color */
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #333; /* Change the background color of the header */
+            color: white; /* Change the text color of the header */
+            padding: 15px;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 80px; /* Adjust the width of the logo image */
+            height: auto;
+        }
+
+        .navbar a {
+            color: white; /* Change the text color of the navigation links */
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 28px; /* Adjust the font size of the heading */
+            color: #333; /* Change the text color of the heading */
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .user {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-size: 16px; /* Adjust the font size of labels */
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 14px; /* Adjust the font size of the input */
+            width: 250px; /* Set the width of the input field */
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px; /* Adjust the font size of the button */
+            background-color: #333; /* Change the background color of the button */
+            color: white; /* Change the text color of the button */
+            cursor: pointer;
+        }
+
+        .genre-suggestions {
+            margin-top: 20px;
+            font-size: 18px; /* Adjust the font size of the genre suggestions */
+            color: #333; /* Change the text color of the genre suggestions */
+        }
+        .genre-thumbnail {
+            width: 50px; /* Set the width of the genre thumbnail */
+            height: auto; /* Automatically adjust the height */
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <header class="header">
+            <div class="logo">
+                <img src="/static/robo_image.png" alt="image"  style="float: left;">
+                <h2  style="margin-left: 70px;margin-top: 10px; font-size: 35px; text-align: center;">Movie Recommendation System</h2>
+               
+            </div>
+            <div class="navbar" style="display: flex; justify-content: space-between;">
+                
+                    <a href="#" class="Home">Home</a>
+                    <a href="#" class="About">About</a>
+                    <a href="#" class="Service">Service</a>
+                    <a href="#" class="Contact">Contact</a>
+                </div>
+              
+            </div>
+        </header>
+        <div class="container">
+            <h1 style="margin-top: 50px;">Welcome to the Movie Recommendation System</h1>
+            <form action="/recommendations" method="post">
+                <div class="info">
+                    <div class="user">
+                        <label for="user_id">Enter User ID:</label>
+                        <input type="text" name="user_id" required>
+                    </div>
+                    <input type="submit" value="Get Recommendations">
+                </div>
+            </form>
+
+             <!-- Genre Suggestions with Thumbnails -->
+             <div class="genre-suggestions">
+                <p>Suggested Genres:</p>
+                <div class="card">
+                    <div class="card-action">
+                        <img class="action" src="static\action.png" alt="Action">
+                         <h3 class="text_Action" style="text-align:center">Action</h3>
+                     </div>
+                     <div class="card-sci-fi">
+                        <img  src="/static/sci-fi.jpg" alt="sci-fi" class="Action">
+                        <h3 class="text_Action" style="text-align:center">Sci-fiction</h3>
+                     </div>
+                     <div class="card-comedy">
+                        <img  src="static\comedy.jpg" alt="comedy" class="Action">
+                        <h3 class="text_Action" style="text-align:center">Comedy</h3>
+                     </div>
+                     <div class="card-romance">
+                        <img  src="static\romance.png" alt="comedy" class="Action">
+                        <h3 class="text_Action" style="text-align:center">Romance</h3>
+                     </div>
+                     <div class="card-fantasy">
+                        <img  src="static\fantasy.jpg" alt="comedy" class="Action">
+                        <h3 class="text_Action" style="text-align:center">Fantasy</h3>
+                     </div>
+                     <div class="card-adventure">
+                        <img  src="/static/adventure.jpg" alt="comedy" class="Action">
+                        <h3 class="text_Action" style="text-align:center">Adventure</h3>
+                     </div>
+                
+                    
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
